@@ -1,38 +1,115 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Jayden Lin</title>
+    <style>
+        body {
+            font-family: "Times New Roman", Times, serif;
+        }
+
+        .profile {
+            display: flex;
+            align-items: flex-start;
+            gap: 8px;
+        }
+
+        .profile-photo {
+            width: 250px;
+            height: auto;
+            display: block;
+        }
+
+        .profile-info {
+            padding-top: 35px;
+        }
+
+        .profile-info h2 {
+            margin: 0 0 22px 0;
+        }
+
+        .contact-info {
+            font-style: italic;
+            line-height: 1.2;
+        }
+
+        .email {
+            margin-top: 2px;
+        }
+
+        @media (max-width: 550px) {
+            .profile {
+                flex-wrap: wrap;
+            }
+
+            .profile-info {
+                padding-top: 0;
+            }
+        }
+    </style>
 </head>
 <body>
-    <h1>Jayden Lin</h1>
-    <img src="jaydenlin.png" alt="Jayden Lin" width="300">
-    <h2>bing chilling 🍦</h2>
-    <a href="https://github.com/NewYorkImperialist">GitHub</a><br>
-    <a href="https://www.worldcubeassociation.org/persons/2026LINJ01">WCA Profile</a><br>
-    <a href="https://www.linkedin.com/in/jaydenlin1/">LinkedIn</a><br>
+    <div class="profile">
+        <img src="budapestjayden.png" alt="Jayden Lin" class="profile-photo">
 
-    <h2>About Me</h2>
-    Sophomore at Northeastern University studying Mathematics and Computer Science<br>
-    <a href="coursework.html">Classes I've Taken</a><br>
+        <div class="profile-info">
+            <h2>Jayden Lin</h2>
 
-    <h2>Projects</h2>
+            <div class="contact-info">
+                <div>Mathematics & Computer Science Undergraduate</div>
+                <div>Northeastern University</div>
+                <div>Boston, MA 02115</div>
+                <div class="email">
+                    Email: <span id="email-address"></span>
+                </div>
+            </div>
+            <br>
+            <h3><a href="jayden_lin_cv.pdf">CV (October 2026)</a><br></h3>
+            <h3><a href="https://github.com/NewYorkImperialist">GitHub</a><br></h3>
+        </div>
+    </div>
+    
+    <br>
+
+    <a href="coursework.html">I'm currently taking these classes.</a><br>
+
+    <br>
+    <h3>About Me</h3>
+    <p>
+      Welcome to my website! I am a math enthusiast and programmer. One of my greatest hobbies is <a href="https://www.worldcubeassociation.org/persons/2026LINJ01">speedsolving Rubik's Cubes</a> ranging from 2x2-7x7 as fast as possible. Recently I just finished up my mathematics study abroad in Budapest, Hungary where besides being renowned to produce the greatest mathematicians, also happens to be the birthplace of the Rubik's cube! Pictured above is me at the official Rubik's Cube store. Other than that I love running, hiking, and rock climbing! Lately I've been <a href="https://github.com/morluto/rea">reverse engineering</a> (legally) my favorite video games so that I can add mods to them (and cheats) as well as porting them to other languages. 
+    </p>
+
+    <h3>Projects</h3>
     <ul>
-        <li><a href="https://analysis.jaydenlin.net">Real Analysis Problem Bank Database</a></li> 
-        <li><a href="https://proveit.fly.dev">Prove It!</a></li> 
+        <li><a href="https://theoremdb.org/statement/?ref=maximum-boundary-intersections-two-simple-heptagons">Heptagon Intersections Problem</a></li>
+        <li><a href="https://timer.jaydenlin.net">Virtual Rubik's Cube Timer</a> virtual cube pb: 7.89 physical cube pb: 7.82 Kinda crazy that they're so close to each other now!</li>
+        <li><a href="https://analysis.jaydenlin.net">Real Analysis Problem Bank Database</a></li>
+        <li><a href="https://proveit.fly.dev">Prove It!</a></li>
         <li><a href="https://wave-length.fly.dev">Wavelength</a></li>
-        <li><a href="https://github.com/NewYorkImperialist/fly-simulator">Fly Brain Simulator </a></li>
-        <li><a href="https://github.com/NewYorkImperialist/cubed-core">Rubik's Cube Computer Vision</a></li>
         <li><a href="https://github.com/NewYorkImperialist/game-controller">DIY Video Game Controller</a></li>
         <li><a href="https://github.com/TSVRN9/BLEh">DIY Bluetooth AirTag</a></li>
     </ul>
-    More on my GitHub!
+    
+    <h3>Mathematical Interests</h3>
+    <ul>
+        <li>Combinatorics</li>
+        <li>Complexity Theory</li>
+        <li>Mathematical Logic</li>
+        <li>Analysis</li>
+    </ul>
 
-    <h2>Contact</h2>
-    Boston, MA <br> 
-    Email:<img src="email.png" alt="lin [dot] jayd [at] northeastern [dot] edu" width="175">
+    <script>
+        const emailCodes = [
+            108, 105, 110, 46, 106, 97, 121, 100, 64,
+            110, 111, 114, 116, 104, 101, 97, 115,
+            116, 101, 114, 110, 46, 101, 100, 117
+        ];
 
+        const email = String.fromCharCode(...emailCodes);
+        document.getElementById("email-address").textContent = email;
+    </script>
 </body>
 </html>
 
